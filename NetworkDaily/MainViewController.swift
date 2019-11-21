@@ -9,7 +9,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
     @IBAction func getRequest(_ sender: Any) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         let session = URLSession.shared
@@ -31,11 +37,28 @@ class MainViewController: UIViewController {
         }.resume()
     }
     @IBAction func postRequest(_ sender: Any) {
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        let userData = ["Course": "Netwoking", "Lesson": "GET and POST Request"]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }
+        // помещаем данные для отправки в тело запроса
+        request.httpBody = httpBody
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        // создаем сессию для отправки данных на сервер
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            guard let response = response, let data = data else { return }
+            
+            print(response)
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error)
+            }
+        }.resume()
     }
 
 }
