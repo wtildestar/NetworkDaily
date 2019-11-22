@@ -17,6 +17,8 @@
 		D74EF94F2386F69B00349A59 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF94E2386F69B00349A59 /* CoursesViewController.swift */; };
 		D74EF9512386FA9F00349A59 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF9502386FA9F00349A59 /* Course.swift */; };
 		D74EF9532387082300349A59 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF9522387082300349A59 /* WebsiteDescription.swift */; };
+		D74EF95523874FC700349A59 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF95423874FC700349A59 /* TableViewCell.swift */; };
+		D74EF95723876F2B00349A59 /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF95623876F2B00349A59 /* WebKitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D74EF94E2386F69B00349A59 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		D74EF9502386FA9F00349A59 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		D74EF9522387082300349A59 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
+		D74EF95423874FC700349A59 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D74EF95623876F2B00349A59 /* WebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 				D74EF94C2386B15A00349A59 /* MainViewController.swift */,
 				D74EF93C23861DB900349A59 /* ImageViewController.swift */,
 				D74EF94E2386F69B00349A59 /* CoursesViewController.swift */,
+				D74EF95423874FC700349A59 /* TableViewCell.swift */,
 				D74EF9522387082300349A59 /* WebsiteDescription.swift */,
+				D74EF95623876F2B00349A59 /* WebKitViewController.swift */,
 				D74EF9502386FA9F00349A59 /* Course.swift */,
 				D74EF93E23861DB900349A59 /* Main.storyboard */,
 				D74EF94123861DB900349A59 /* Assets.xcassets */,
@@ -151,12 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74EF9532387082300349A59 /* WebsiteDescription.swift in Sources */,
+				D74EF95523874FC700349A59 /* TableViewCell.swift in Sources */,
 				D74EF9512386FA9F00349A59 /* Course.swift in Sources */,
 				D74EF93D23861DB900349A59 /* ImageViewController.swift in Sources */,
 				D74EF93923861DB900349A59 /* AppDelegate.swift in Sources */,
 				D74EF93B23861DB900349A59 /* SceneDelegate.swift in Sources */,
 				D74EF94D2386B15A00349A59 /* MainViewController.swift in Sources */,
 				D74EF94F2386F69B00349A59 /* CoursesViewController.swift in Sources */,
+				D74EF95723876F2B00349A59 /* WebKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

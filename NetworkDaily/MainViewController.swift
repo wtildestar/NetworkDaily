@@ -21,11 +21,9 @@ class MainViewController: UIViewController {
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
             guard
-                let response = response,
+                
                 let data = data
                 else { return }
-            print(response)
-            print(data)
             
             // преобразуем в универсальный json формат с помощью сериализации
             do {
@@ -48,9 +46,7 @@ class MainViewController: UIViewController {
         // создаем сессию для отправки данных на сервер
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-            guard let response = response, let data = data else { return }
-            
-            print(response)
+            guard let data = data else { return }
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
