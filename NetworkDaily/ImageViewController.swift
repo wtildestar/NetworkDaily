@@ -10,6 +10,8 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
+    private let url = "http://papers.co/wallpaper/papers.co-np75-flower-bokeh-romantic-nature-blue-1-wallpaper.jpg"
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -24,22 +26,10 @@ class ImageViewController: UIViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        // пишем проверку на валидность нашего адреса
-        guard let url = URL(string: "http://papers.co/wallpaper/papers.co-bj16-sky-blue-pastel-art-1-wallpaper.jpg") else { return }
-        
-        // если адрес будет валидным создаем экземпляр URLSession вызывая свойство класса shared создав singleton объекта для общей сессии который использует глобальный кеш для хранения файлов куки и учетных данных
-        let session = URLSession.shared
-        // создает задачу на получение содержимого по указанному урл-адресу
-        session.dataTask(with: url) { (data, response, error) in
-            if let data = data, let image = UIImage(data: data) {
-                // передаем задачу по обновлению интерфейса в основной поток
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    self.imageView.image = image
-                }
-            }
-        }.resume()
-        
+        NetworkManager.downloadImage(url: url) { (image) in
+            self.activityIndicator.stopAnimating()
+            self.imageView.image = image
+        }
     }
 }
 
