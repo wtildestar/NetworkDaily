@@ -21,6 +21,7 @@
 		D74EF9592388200300349A59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF9582388200300349A59 /* ViewController.swift */; };
 		D74EF95B238823B700349A59 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF95A238823B700349A59 /* CollectionViewCell.swift */; };
 		D74EF95D238919AC00349A59 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF95C238919AC00349A59 /* NetworkManager.swift */; };
+		D769A730238950BD0078BC6C /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A72F238950BD0078BC6C /* ImageProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D74EF9582388200300349A59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D74EF95A238823B700349A59 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D74EF95C238919AC00349A59 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D769A72F238950BD0078BC6C /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				D74EF95423874FC700349A59 /* TableViewCell.swift */,
 				D74EF9522387082300349A59 /* WebsiteDescription.swift */,
 				D74EF95623876F2B00349A59 /* WebKitViewController.swift */,
+				D769A72F238950BD0078BC6C /* ImageProperties.swift */,
 				D74EF9502386FA9F00349A59 /* Course.swift */,
 				D74EF93E23861DB900349A59 /* Main.storyboard */,
 				D74EF94123861DB900349A59 /* Assets.xcassets */,
@@ -170,6 +173,7 @@
 				D74EF93D23861DB900349A59 /* ImageViewController.swift in Sources */,
 				D74EF93923861DB900349A59 /* AppDelegate.swift in Sources */,
 				D74EF93B23861DB900349A59 /* SceneDelegate.swift in Sources */,
+				D769A730238950BD0078BC6C /* ImageProperties.swift in Sources */,
 				D74EF94F2386F69B00349A59 /* CoursesViewController.swift in Sources */,
 				D74EF95723876F2B00349A59 /* WebKitViewController.swift in Sources */,
 				D74EF95B238823B700349A59 /* CollectionViewCell.swift in Sources */,

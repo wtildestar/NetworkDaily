@@ -71,17 +71,45 @@ class NetworkManager {
     
     static func fetchData(url: String, completion: @escaping (_ courses: [Course]) -> ()) {
         guard let url = URL(string: url) else { return }
-               URLSession.shared.dataTask(with: url) { (data, _, _) in
-                   guard let data = data else { return }
-                   // декодируем данные по представлению из модели
-                   do {
-                       let decoder = JSONDecoder()
-                       decoder.keyDecodingStrategy = .convertFromSnakeCase
-                       let courses = try decoder.decode([Course].self, from: data)
-                        completion(courses)
-                   } catch let error {
-                       print("Error serialization json", error)
-                   }
-               }.resume()
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else { return }
+            // декодируем данные по представлению из модели
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let courses = try decoder.decode([Course].self, from: data)
+                completion(courses)
+            } catch let error {
+                print("Error serialization json", error)
+            }
+        }.resume()
+    }
+    
+    static func uploadImage(url: String) {
+        
+        let image = UIImage(named: "identification")!
+        let httpHeaders = ["Authorization": "Client-ID f3b4ffffecd2b99"]
+        guard let imageProperties = ImageProperties(withImage: image, forKey: "image") else { return }
+        guard let url = URL(string: url) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = httpHeaders
+        request.httpBody = imageProperties.data
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
+        
     }
 }
