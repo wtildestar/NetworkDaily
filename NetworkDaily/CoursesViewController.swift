@@ -16,14 +16,7 @@ class CoursesViewController: UIViewController {
     private let url = "https://swiftbook.ru/wp-content/uploads/api/api_courses"
     
     @IBOutlet weak var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        fetchData()
-        
-    }
-    
     func fetchData() {
         
         NetworkManager.fetchData(url: url) { (courses) in
@@ -35,6 +28,11 @@ class CoursesViewController: UIViewController {
         }
         
     }
+    
+    func fetchDataWithAlamofire() {
+        AlamofireNetworkRequest.sendRequest(url: url)
+    }
+    
     // создаем метод для конфигурации ячейки
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
         let course = courses[indexPath.row]
