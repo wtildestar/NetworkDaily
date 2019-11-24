@@ -9,14 +9,14 @@
 import UIKit
 
 class CoursesViewController: UIViewController {
-
+    
     private var courses = [Course]()
     private var courseName: String?
     private var courseURL: String?
     private let url = "https://swiftbook.ru/wp-content/uploads/api/api_courses"
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     func fetchData() {
         
         NetworkManager.fetchData(url: url) { (courses) in
@@ -30,7 +30,12 @@ class CoursesViewController: UIViewController {
     }
     
     func fetchDataWithAlamofire() {
-        AlamofireNetworkRequest.sendRequest(url: url)
+        AlamofireNetworkRequest.sendRequest(url: url) { (courses) in
+            self.courses = courses
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // создаем метод для конфигурации ячейки
@@ -49,9 +54,9 @@ class CoursesViewController: UIViewController {
         // работу по получению данных пишем в глобальной очереди
         DispatchQueue.global().async {
             // берем изображение по ссылке
-           guard let imageUrl = URL(string: course.imageUrl!) else { return }
-           // проверяем есть ли данные по ссылке
-           guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+            guard let imageUrl = URL(string: course.imageUrl!) else { return }
+            // проверяем есть ли данные по ссылке
+            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
             // внутри глобальной очереди обращаемся к основной очереди
             DispatchQueue.main.async {
                 // присваиваем данные ячейке
@@ -107,7 +112,7 @@ extension CoursesViewController: UITableViewDelegate {
         courseURL = course.link
         courseName = course.name
         
-//         открываем WebKitViewController кликая по ячейке
+        //         открываем WebKitViewController кликая по ячейке
         performSegue(withIdentifier: "Description", sender: self)
     }
     
