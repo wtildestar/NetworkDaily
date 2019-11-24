@@ -18,8 +18,9 @@ class DataProvider: NSObject {
     private lazy var bgSession: URLSession = {
         // свойство config будет определять поведение сессии при загрузке и выгрузки данных
         let config = URLSessionConfiguration.background(withIdentifier: "wtildestar.NetworkDaily")
-        // isDiscretionary определяет могут ли фоновые задачи запланированы по усмотрению системы для обеспечения производительности
-        //        config.isDiscretionary = true
+        config.isDiscretionary = true // запуск задачи в оптимальное время (по умолч false)
+        config.timeoutIntervalForResource = 300 // Время ожидания сети в сек
+        config.waitsForConnectivity = true // Ожидание подключения к сети (по умолч true)
         // по завершению загрузки данных приложение запуститься в фоновом режиме
         config.sessionSendsLaunchEvents = true
         return URLSession(configuration: config, delegate: self, delegateQueue: nil)
@@ -88,7 +89,12 @@ extension DataProvider: URLSessionDownloadDelegate {
         }
         
     }
-    
+    // восстановления соединения
+    func urlSession(_ session: URLSession, taskIsWaitingForConnectivity task: URLSessionTask) {
+        
+        // ожидание соединения, обновление интерфейса и прочее
+        
+    }
     
     
 }
