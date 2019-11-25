@@ -30,4 +30,39 @@ class AlamofireNetworkRequest {
         }
     }
     
+    static func responseData(url: String) {
+        request(url).responseData { (responseData) in
+            switch responseData.result {
+            case .success(let data):
+                guard let string = String(data: data, encoding: .utf8) else { return }
+                print(string)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    static func responseString(url: String) {
+        request(url).responseString { (responseString) in
+            switch responseString.result {
+            case .success(let string):
+                print(string)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    // у метода response нет result, то есть полученные данные обрабатываются вручную
+    static func response(url: String) {
+        request(url).responseData { (response) in
+            guard
+                let data = response.data,
+                let string = String(data: data, encoding: .utf8)
+                else { return }
+            
+            print(string)
+        }
+    }
+    
 }
