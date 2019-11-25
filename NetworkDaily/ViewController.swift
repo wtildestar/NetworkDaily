@@ -20,6 +20,7 @@ enum Actions: String, CaseIterable {
     case responseData = "responseData"
     case responseString = "responseString"
     case response = "response"
+    case downloadLargeImage = "Download Large Image"
 }
 
 private let reuseIdentifier = "Cell"
@@ -130,6 +131,8 @@ class ViewController: UICollectionViewController {
             AlamofireNetworkRequest.responseString(url: swiftbookApi)
         case .response:
             AlamofireNetworkRequest.response(url: swiftbookApi)
+        case .downloadLargeImage:
+            performSegue(withIdentifier: "LargeImage", sender: self)
         }
     }
     
@@ -147,6 +150,8 @@ class ViewController: UICollectionViewController {
         case "ResponseData":
             imageVC?.fetchDataWithAlamofire()
             AlamofireNetworkRequest.responseData(url: swiftbookApi)
+        case "LargeImage":
+            imageVC?.downloadImageWithProgress()
         default:
             break
         }

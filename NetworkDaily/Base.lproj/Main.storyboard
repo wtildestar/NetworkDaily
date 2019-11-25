@@ -22,14 +22,30 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Qr6-Lo-q9Y">
                                 <rect key="frame" x="197" y="465" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Kk-n1d">
+                                <rect key="frame" x="132" y="684" width="150" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deF-Zo-Won">
+                                <rect key="frame" x="186" y="574" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ngo-ym-dyO" secondAttribute="bottom" id="0YR-tn-KPl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KbE-Kk-n1d" secondAttribute="bottom" constant="176" id="0lT-hI-V3B"/>
+                            <constraint firstItem="KbE-Kk-n1d" firstAttribute="top" secondItem="deF-Zo-Won" secondAttribute="bottom" constant="89" id="8iJ-z4-X11"/>
+                            <constraint firstItem="deF-Zo-Won" firstAttribute="top" secondItem="Qr6-Lo-q9Y" secondAttribute="bottom" constant="89" id="DfO-N0-wtR"/>
                             <constraint firstItem="ngo-ym-dyO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EJp-xN-OX1"/>
                             <constraint firstItem="Qr6-Lo-q9Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PA6-6g-ATC"/>
                             <constraint firstItem="ngo-ym-dyO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wad-bO-y5b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deF-Zo-Won" secondAttribute="trailing" constant="186" id="bXt-eB-5qC"/>
+                            <constraint firstItem="deF-Zo-Won" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="dnz-GI-y3K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KbE-Kk-n1d" secondAttribute="trailing" constant="112" id="hEx-7a-UY4"/>
                             <constraint firstItem="ngo-ym-dyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m5b-3m-Y8Y"/>
+                            <constraint firstItem="KbE-Kk-n1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="ocm-5X-wJv"/>
                             <constraint firstItem="Qr6-Lo-q9Y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="p1I-yC-xcP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,12 +53,14 @@
                     <navigationItem key="navigationItem" id="K6o-J5-8Y6"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Qr6-Lo-q9Y" id="mvg-vQ-eN9"/>
+                        <outlet property="completedLabel" destination="deF-Zo-Won" id="mAZ-wg-fBc"/>
                         <outlet property="imageView" destination="ngo-ym-dyO" id="rhB-qp-vTW"/>
+                        <outlet property="progressView" destination="KbE-Kk-n1d" id="QIv-oD-vqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981" y="-579"/>
+            <point key="canvasLocation" x="1979.7101449275365" y="-579.24107142857144"/>
         </scene>
         <!--Our courses-->
         <scene sceneID="cct-57-fET">
@@ -237,6 +255,7 @@
                         <segue destination="5B2-9M-3kh" kind="show" identifier="OurCourses" id="wpq-uR-bXc"/>
                         <segue destination="5B2-9M-3kh" kind="show" identifier="OurCoursesWithAlamofire" id="ckI-1h-9XI"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ResponseData" id="aRU-Mk-quU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LargeImage" id="19k-BV-t6Q"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kI9-uJ-GUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,6 +283,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ckI-1h-9XI"/>
-        <segue reference="Tee-e7-eZM"/>
+        <segue reference="19k-BV-t6Q"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,10 @@ import Alamofire
 
 class ImageViewController: UIViewController {
     
+    @IBOutlet weak var completedLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     private let url = "http://papers.co/wallpaper/papers.co-np75-flower-bokeh-romantic-nature-blue-1-wallpaper.jpg"
+    private let largeImgUrl = "https://i.imgur.com/DO9ASUd.jpg"
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -34,15 +37,31 @@ class ImageViewController: UIViewController {
     }
     
     func fetchDataWithAlamofire() {
-        request(url).responseData { (responseData) in
-            switch responseData.result {
-            case .success(let data):
-                guard let image = UIImage(data: data) else { return }
-                self.activityIndicator.stopAnimating()
-                self.imageView.image = image
-            case .failure(let error):
-                print(error)
-            }
+        
+        AlamofireNetworkRequest.downloadImage(url: url) { (image) in
+            
+            self.activityIndicator.stopAnimating()
+            self.imageView.image = image
+            
+        }
+        
+    }
+    
+    func downloadImageWithProgress() {
+        
+        AlamofireNetworkRequest.onProgress = { progress in
+            self.progressView.isHidden = false
+            self.progressView.progress = Float(progress)
+        }
+        AlamofireNetworkRequest.completed = { completed in
+            self.completedLabel.isHidden = false
+            self.completedLabel.text = completed
+        }
+        AlamofireNetworkRequest.downloadImageWithProgress(url: largeImgUrl) { (image) in
+            self.activityIndicator.stopAnimating()
+            self.completedLabel.isHidden = true
+            self.progressView.isHidden = true
+            self.imageView.image = image
         }
     }
 }
