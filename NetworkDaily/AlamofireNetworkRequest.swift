@@ -174,4 +174,47 @@ class AlamofireNetworkRequest {
         }
     }
     
+    static func uploadImage(url: String) {
+        guard let url = URL(string: url) else { return }
+        
+        let image = UIImage(named: "identification")!
+        let data = image.pngData()!
+        // словарь служит для передачи параметров авторизации
+        let httpHeaders = ["Authorization": "Client-ID f3b4ffffecd2b99"]
+        
+        // выгрузка
+        // multipartFormData предназначен для создания данных из составных частей для последующей передачи этих данных по протоколу HTTP (не подойдет если данные слишком велики(выгрузка видеоконтента)
+        upload(multipartFormData: { (multipartFormData) in
+            
+            multipartFormData.append(data, withName: "image") // withName: "image" - передаем ключ с апи
+            
+        }, to: url,
+           headers: httpHeaders) { (encodingCompletion) in
+            
+            switch encodingCompletion {
+            case .success(request: let uploadRequest,
+                          streamingFromDisk: let streamingFromDisk,
+                          streamFileURL: let streamFileURL):
+                print(uploadRequest)
+                // streamingFromDisk изображение находится в коде а не на устройстве поэтому false
+                print(streamingFromDisk)
+                // не делаем потоковую передачу данных с диска, иначе укзаать ссылку где хранится файл
+                print(streamFileURL ?? "streamingFileURL is nil")
+                
+                uploadRequest.validate().responseJSON { (responseJSON) in
+                    switch responseJSON.result {
+                    case .success(let value):
+                        print(value)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
+    
 }
