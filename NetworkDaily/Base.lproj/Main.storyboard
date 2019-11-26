@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6p-HX-DtG">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Smh-4o-qdz">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ngo-ym-dyO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Qr6-Lo-q9Y">
-                                <rect key="frame" x="197" y="465" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="345.5" width="20" height="20"/>
                             </activityIndicatorView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-Kk-n1d">
-                                <rect key="frame" x="132" y="684" width="150" height="2"/>
+                                <rect key="frame" x="128" y="489" width="119" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="9YU-u1-PNT"/>
+                                </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deF-Zo-Won">
-                                <rect key="frame" x="186" y="574" width="42" height="21"/>
+                                <rect key="frame" x="145" y="414" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,18 +38,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ngo-ym-dyO" secondAttribute="bottom" id="0YR-tn-KPl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KbE-Kk-n1d" secondAttribute="bottom" constant="176" id="0lT-hI-V3B"/>
-                            <constraint firstItem="KbE-Kk-n1d" firstAttribute="top" secondItem="deF-Zo-Won" secondAttribute="bottom" constant="89" id="8iJ-z4-X11"/>
-                            <constraint firstItem="deF-Zo-Won" firstAttribute="top" secondItem="Qr6-Lo-q9Y" secondAttribute="bottom" constant="89" id="DfO-N0-wtR"/>
                             <constraint firstItem="ngo-ym-dyO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EJp-xN-OX1"/>
+                            <constraint firstItem="deF-Zo-Won" firstAttribute="top" secondItem="Qr6-Lo-q9Y" secondAttribute="bottom" constant="48.5" id="GBn-zH-LZG"/>
                             <constraint firstItem="Qr6-Lo-q9Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PA6-6g-ATC"/>
                             <constraint firstItem="ngo-ym-dyO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wad-bO-y5b"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deF-Zo-Won" secondAttribute="trailing" constant="186" id="bXt-eB-5qC"/>
-                            <constraint firstItem="deF-Zo-Won" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="dnz-GI-y3K"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KbE-Kk-n1d" secondAttribute="trailing" constant="112" id="hEx-7a-UY4"/>
+                            <constraint firstItem="KbE-Kk-n1d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XhS-A9-U5Z"/>
+                            <constraint firstItem="KbE-Kk-n1d" firstAttribute="top" secondItem="deF-Zo-Won" secondAttribute="bottom" constant="54" id="asR-Ga-KV3"/>
                             <constraint firstItem="ngo-ym-dyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m5b-3m-Y8Y"/>
-                            <constraint firstItem="KbE-Kk-n1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="ocm-5X-wJv"/>
                             <constraint firstItem="Qr6-Lo-q9Y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="p1I-yC-xcP"/>
+                            <constraint firstItem="deF-Zo-Won" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vtz-8v-zPq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -60,14 +60,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979.7101449275365" y="-579.24107142857144"/>
+            <point key="canvasLocation" x="1978.4000000000001" y="-579.76011994002999"/>
         </scene>
         <!--Our courses-->
         <scene sceneID="cct-57-fET">
             <objects>
                 <viewController id="5B2-9M-3kh" customClass="CoursesViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQy-jJ-rcW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AtC-bv-8VT">
@@ -166,7 +166,7 @@
             <objects>
                 <viewController id="UKb-Re-13R" customClass="WebKitViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BaB-D2-2bT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abR-wW-cmy">
@@ -197,7 +197,7 @@
             <objects>
                 <collectionViewController id="wT6-qc-08I" customClass="ViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Sob-kz-sat">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="noS-pr-Co9">
@@ -209,7 +209,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="aKt-HM-oLP" customClass="CollectionViewCell" customModule="NetworkDaily" customModuleProvider="target">
-                                <rect key="frame" x="32" y="40" width="350" height="100"/>
+                                <rect key="frame" x="12.5" y="40" width="350" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wz3-S7-5xK">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
@@ -264,13 +264,28 @@
             </objects>
             <point key="canvasLocation" x="1115.9420289855072" y="107.8125"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="nc0-Rb-pLw">
+            <objects>
+                <viewController id="Smh-4o-qdz" customClass="LoginViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d9Q-MG-KKH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="i0v-du-R6v"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqt-aH-zK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="107"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rj7-OM-d5f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P6p-HX-DtG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dDJ-nm-h8X">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -285,6 +300,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="G6b-8G-S5T"/>
-        <segue reference="19k-BV-t6Q"/>
+        <segue reference="Tee-e7-eZM"/>
     </inferredMetricsTieBreakers>
 </document>

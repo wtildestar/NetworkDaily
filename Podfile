@@ -6,5 +6,7 @@ target 'NetworkDaily' do
   use_frameworks!
 
   pod 'Alamofire'
+pod 'FBSDKCoreKit'  
+pod 'FBSDKLoginKit'
 
 end

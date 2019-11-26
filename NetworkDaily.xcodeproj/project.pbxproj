@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,7 @@
 		D769A730238950BD0078BC6C /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A72F238950BD0078BC6C /* ImageProperties.swift */; };
 		D769A734238972170078BC6C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A733238972170078BC6C /* DataProvider.swift */; };
 		D769A736238AF84C0078BC6C /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */; };
+		D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C823AA238D715500DC7D84 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		D769A72F238950BD0078BC6C /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		D769A733238972170078BC6C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
+		D76F35CF238D59A5003C4724 /* NetworkDaily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDaily.entitlements; sourceTree = "<group>"; };
+		D7C823AA238D715500DC7D84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +81,6 @@
 				719F3CD6470636E7B6384412 /* Pods-NetworkDaily.debug.xcconfig */,
 				5A1C86158C2CDA769B692638 /* Pods-NetworkDaily.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,26 +105,52 @@
 		D74EF93723861DB900349A59 /* NetworkDaily */ = {
 			isa = PBXGroup;
 			children = (
+				D7C823AE238D71CC00DC7D84 /* Models */,
+				D7C823AD238D718400DC7D84 /* Sup */,
+				D7C823AC238D715900DC7D84 /* Controllers */,
+				D76F35CF238D59A5003C4724 /* NetworkDaily.entitlements */,
 				D74EF93823861DB900349A59 /* AppDelegate.swift */,
 				D74EF93A23861DB900349A59 /* SceneDelegate.swift */,
-				D74EF95C238919AC00349A59 /* NetworkManager.swift */,
 				D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */,
-				D74EF9582388200300349A59 /* ViewController.swift */,
-				D74EF93C23861DB900349A59 /* ImageViewController.swift */,
-				D74EF94E2386F69B00349A59 /* CoursesViewController.swift */,
 				D74EF95A238823B700349A59 /* CollectionViewCell.swift */,
 				D74EF95423874FC700349A59 /* TableViewCell.swift */,
-				D74EF9522387082300349A59 /* WebsiteDescription.swift */,
-				D74EF95623876F2B00349A59 /* WebKitViewController.swift */,
-				D769A72F238950BD0078BC6C /* ImageProperties.swift */,
 				D769A733238972170078BC6C /* DataProvider.swift */,
-				D74EF9502386FA9F00349A59 /* Course.swift */,
 				D74EF93E23861DB900349A59 /* Main.storyboard */,
 				D74EF94123861DB900349A59 /* Assets.xcassets */,
 				D74EF94323861DB900349A59 /* LaunchScreen.storyboard */,
 				D74EF94623861DB900349A59 /* Info.plist */,
 			);
 			path = NetworkDaily;
+			sourceTree = "<group>";
+		};
+		D7C823AC238D715900DC7D84 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D74EF9582388200300349A59 /* ViewController.swift */,
+				D74EF93C23861DB900349A59 /* ImageViewController.swift */,
+				D74EF94E2386F69B00349A59 /* CoursesViewController.swift */,
+				D74EF95623876F2B00349A59 /* WebKitViewController.swift */,
+				D7C823AA238D715500DC7D84 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D7C823AD238D718400DC7D84 /* Sup */ = {
+			isa = PBXGroup;
+			children = (
+				D74EF95C238919AC00349A59 /* NetworkManager.swift */,
+			);
+			name = Sup;
+			sourceTree = "<group>";
+		};
+		D7C823AE238D71CC00DC7D84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D74EF9502386FA9F00349A59 /* Course.swift */,
+				D769A72F238950BD0078BC6C /* ImageProperties.swift */,
+				D74EF9522387082300349A59 /* WebsiteDescription.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +271,7 @@
 				D74EF95D238919AC00349A59 /* NetworkManager.swift in Sources */,
 				D74EF9592388200300349A59 /* ViewController.swift in Sources */,
 				D74EF9532387082300349A59 /* WebsiteDescription.swift in Sources */,
+				D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */,
 				D74EF95523874FC700349A59 /* TableViewCell.swift in Sources */,
 				D74EF9512386FA9F00349A59 /* Course.swift in Sources */,
 				D74EF93D23861DB900349A59 /* ImageViewController.swift in Sources */,
@@ -398,12 +427,44 @@
 			baseConfigurationReference = 719F3CD6470636E7B6384412 /* Pods-NetworkDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetworkDaily/NetworkDaily.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MYWL92898Y;
 				INFOPLIST_FILE = NetworkDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-weak_framework",
+					"\"Accelerate\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wtildestar.NetworkDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,12 +478,44 @@
 			baseConfigurationReference = 5A1C86158C2CDA769B692638 /* Pods-NetworkDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetworkDaily/NetworkDaily.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MYWL92898Y;
 				INFOPLIST_FILE = NetworkDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-weak_framework",
+					"\"Accelerate\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wtildestar.NetworkDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -152,6 +152,8 @@ class ViewController: UICollectionViewController {
         let imageVC = segue.destination as? ImageViewController
         
         switch segue.identifier {
+        case "ShowImage" :
+            imageVC?.fetchImage()
         case "OurCourses":
             coursesVC?.fetchData()
         case "OurCoursesWithAlamofire":

@@ -21,15 +21,17 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.isHidden = true
+
+        activityIndicator.isHidden = false
         activityIndicator.hidesWhenStopped = true
-        fetchImage()
+        activityIndicator.startAnimating()
+        
+        completedLabel.isHidden = true
+        progressView.isHidden = true
+        
     }
     
     func fetchImage() {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
-        
         NetworkManager.downloadImage(url: url) { (image) in
             self.activityIndicator.stopAnimating()
             self.imageView.image = image
