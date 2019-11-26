@@ -22,11 +22,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         setupViews()
-        
-        if AccessToken.isCurrentAccessTokenActive {
-            print("The user is logged in")
-        }
-        
     }
     
     private func setupViews() {
@@ -35,6 +30,8 @@ class LoginViewController: UIViewController {
 
 }
 
+// MARK: - FacebookSDK
+
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         
@@ -42,6 +39,11 @@ extension LoginViewController: LoginButtonDelegate {
             print(error!)
             return
         }
+        
+        guard AccessToken.isCurrentAccessTokenActive else { return }
+        
+        openMainViewController()
+        
         print("Successfully logged in with facebook...")
     }
     
@@ -49,5 +51,8 @@ extension LoginViewController: LoginButtonDelegate {
         print("Did log out of facebook")
     }
     
+    private func openMainViewController() {
+        dismiss(animated: true)
+    }
     
 }

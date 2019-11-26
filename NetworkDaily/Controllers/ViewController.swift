@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import FBSDKLoginKit
 
 enum Actions: String, CaseIterable {
     case downloadImage = "Download Image"
@@ -55,6 +56,8 @@ class ViewController: UICollectionViewController {
             self.postNotification()
             
         }
+        
+        checkLoggedIn()
     }
     
     private func showAlert() {
@@ -195,4 +198,24 @@ extension ViewController {
         
     }
     
+}
+
+// MARK: - FacebookSDK
+
+extension ViewController {
+    private func checkLoggedIn() {
+        
+        if !(AccessToken.isCurrentAccessTokenActive) {
+            // открываем LoginViewCOntroller в основном потоке если пользователь не авторизован через facebooksdk
+            DispatchQueue.main.async {
+                // обращаемся к Main storyboard
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                // Находим LoginViewController по идентификатору
+                let loginVC = storyBoard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+                // отображаем созданный loginVC
+                self.present(loginVC, animated: true)
+                return
+            }
+        }
+    }
 }

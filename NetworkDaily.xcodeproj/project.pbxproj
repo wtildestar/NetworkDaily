@@ -22,6 +22,7 @@
 		D74EF9592388200300349A59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF9582388200300349A59 /* ViewController.swift */; };
 		D74EF95B238823B700349A59 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF95A238823B700349A59 /* CollectionViewCell.swift */; };
 		D74EF95D238919AC00349A59 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF95C238919AC00349A59 /* NetworkManager.swift */; };
+		D7595E43238D820800F6CBE0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7595E42238D820800F6CBE0 /* UserViewController.swift */; };
 		D769A730238950BD0078BC6C /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A72F238950BD0078BC6C /* ImageProperties.swift */; };
 		D769A734238972170078BC6C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A733238972170078BC6C /* DataProvider.swift */; };
 		D769A736238AF84C0078BC6C /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */; };
@@ -48,6 +49,7 @@
 		D74EF9582388200300349A59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D74EF95A238823B700349A59 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D74EF95C238919AC00349A59 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D7595E42238D820800F6CBE0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D769A72F238950BD0078BC6C /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		D769A733238972170078BC6C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
@@ -105,9 +107,9 @@
 		D74EF93723861DB900349A59 /* NetworkDaily */ = {
 			isa = PBXGroup;
 			children = (
+				D7C823AC238D715900DC7D84 /* Controllers */,
 				D7C823AE238D71CC00DC7D84 /* Models */,
 				D7C823AD238D718400DC7D84 /* Sup */,
-				D7C823AC238D715900DC7D84 /* Controllers */,
 				D76F35CF238D59A5003C4724 /* NetworkDaily.entitlements */,
 				D74EF93823861DB900349A59 /* AppDelegate.swift */,
 				D74EF93A23861DB900349A59 /* SceneDelegate.swift */,
@@ -131,6 +133,7 @@
 				D74EF94E2386F69B00349A59 /* CoursesViewController.swift */,
 				D74EF95623876F2B00349A59 /* WebKitViewController.swift */,
 				D7C823AA238D715500DC7D84 /* LoginViewController.swift */,
+				D7595E42238D820800F6CBE0 /* UserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74EF95D238919AC00349A59 /* NetworkManager.swift in Sources */,
+				D7595E43238D820800F6CBE0 /* UserViewController.swift in Sources */,
 				D74EF9592388200300349A59 /* ViewController.swift in Sources */,
 				D74EF9532387082300349A59 /* WebsiteDescription.swift in Sources */,
 				D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */,
