@@ -26,6 +26,7 @@
 		D769A730238950BD0078BC6C /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A72F238950BD0078BC6C /* ImageProperties.swift */; };
 		D769A734238972170078BC6C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A733238972170078BC6C /* DataProvider.swift */; };
 		D769A736238AF84C0078BC6C /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */; };
+		D7BDA379238DC8000023C454 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BDA378238DC8000023C454 /* Extensions.swift */; };
 		D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C823AA238D715500DC7D84 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		D769A733238972170078BC6C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		D76F35CF238D59A5003C4724 /* NetworkDaily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDaily.entitlements; sourceTree = "<group>"; };
+		D7BDA378238DC8000023C454 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D7C823AA238D715500DC7D84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D74EF95C238919AC00349A59 /* NetworkManager.swift */,
+				D7BDA378238DC8000023C454 /* Extensions.swift */,
 			);
 			name = Sup;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				D769A730238950BD0078BC6C /* ImageProperties.swift in Sources */,
 				D74EF94F2386F69B00349A59 /* CoursesViewController.swift in Sources */,
 				D74EF95723876F2B00349A59 /* WebKitViewController.swift in Sources */,
+				D7BDA379238DC8000023C454 /* Extensions.swift in Sources */,
 				D74EF95B238823B700349A59 /* CollectionViewCell.swift in Sources */,
 				D769A734238972170078BC6C /* DataProvider.swift in Sources */,
 			);

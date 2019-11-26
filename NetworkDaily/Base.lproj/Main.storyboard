@@ -267,7 +267,7 @@
         <!--Login View Controller-->
         <scene sceneID="nc0-Rb-pLw">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Smh-4o-qdz" customClass="LoginViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="Smh-4o-qdz" customClass="LoginViewController" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d9Q-MG-KKH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
