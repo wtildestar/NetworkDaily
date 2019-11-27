@@ -67,20 +67,6 @@ extension UserViewController: LoginButtonDelegate {
         } catch let error {
             print("Failer to sign out with error", error.localizedDescription)
         }
-        
-//        if !(AccessToken.isCurrentAccessTokenActive) {
-//            // открываем LoginViewCOntroller в основном потоке если пользователь не авторизован через facebooksdk
-//            DispatchQueue.main.async {
-//                // обращаемся к Main storyboard
-//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                // Находим LoginViewController по идентификатору
-//                let loginVC = storyBoard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
-//                // отображаем созданный loginVC
-//                self.present(loginVC, animated: true)
-//                return
-//            }
-//        }
     }
-    
     
 }
