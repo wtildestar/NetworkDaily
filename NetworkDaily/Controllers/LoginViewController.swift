@@ -106,12 +106,13 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     private func fetchFacebookFields() {
+        // парсим данные полученные из публичного профиля пользователя
         GraphRequest(graphPath: "me", parameters: ["Fields": "id, name, email"]).start { (_, result, error) in
             if let error = error {
                 print(error)
                 return
             }
-            
+            // раскладываем данные по структуре
             if let userData = result as? [String: Any] {
                 self.userProfile = UserProfile(data: userData)
                 print(userData)
@@ -123,6 +124,7 @@ extension LoginViewController: LoginButtonDelegate {
     
     private func saveIntoFirebase() {
         
+        // .currentUser?.uid - идентификатор текущего пользователя
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let userData = ["name": userProfile?.name, "email": userProfile?.email]

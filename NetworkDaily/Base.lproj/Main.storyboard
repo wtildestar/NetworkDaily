@@ -287,27 +287,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in with Facebook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-GI-tyo">
-                                <rect key="frame" x="3" y="277" width="369" height="64"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in with Facebook" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-GI-tyo">
+                                <rect key="frame" x="80.5" y="190" width="214" height="238"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-1m-JuR">
+                                <rect key="frame" x="177.5" y="299" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2dO-GI-tyo" firstAttribute="centerX" secondItem="1Z4-kl-iIn" secondAttribute="centerX" id="3Dx-Lu-uTB"/>
-                            <constraint firstItem="2dO-GI-tyo" firstAttribute="centerY" secondItem="1Z4-kl-iIn" secondAttribute="centerY" id="Q6c-kl-dGz"/>
+                            <constraint firstItem="2dO-GI-tyo" firstAttribute="centerY" secondItem="iHW-1m-JuR" secondAttribute="centerY" id="1QG-aa-p3v"/>
+                            <constraint firstItem="2dO-GI-tyo" firstAttribute="centerX" secondItem="1Z4-kl-iIn" secondAttribute="centerX" id="2AM-6G-0Oq"/>
+                            <constraint firstItem="2dO-GI-tyo" firstAttribute="centerX" secondItem="iHW-1m-JuR" secondAttribute="centerX" id="Lhq-is-lt9"/>
+                            <constraint firstItem="1Z4-kl-iIn" firstAttribute="bottom" secondItem="2dO-GI-tyo" secondAttribute="bottom" constant="190" id="NK4-Ci-Ko4"/>
+                            <constraint firstItem="2dO-GI-tyo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Z4-kl-iIn" secondAttribute="leading" constant="16" id="UXb-Tf-1e5"/>
+                            <constraint firstItem="1Z4-kl-iIn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2dO-GI-tyo" secondAttribute="trailing" constant="16" id="uUH-lY-LIe"/>
+                            <constraint firstItem="2dO-GI-tyo" firstAttribute="top" secondItem="1Z4-kl-iIn" secondAttribute="top" constant="190" id="z1G-pd-ekg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Z4-kl-iIn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profile-icon" landscapeImage="profile-icon" largeContentSizeImage="profile-icon" selectedImage="profile-icon" id="IdY-UF-IaZ">
                         <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="iHW-1m-JuR" id="WR2-Dq-sl9"/>
+                        <outlet property="userNameLabel" destination="2dO-GI-tyo" id="c7k-rV-6fA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wd-Dw-GPY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="876"/>
+            <point key="canvasLocation" x="205.59999999999999" y="875.71214392803608"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rj7-OM-d5f">

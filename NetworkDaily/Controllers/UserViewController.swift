@@ -9,8 +9,11 @@
 import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class UserViewController: UIViewController {
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     lazy var fbLoginButton: UIButton = {
         let loginButton = FBLoginButton()
@@ -24,8 +27,14 @@ class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userNameLabel.isHidden = true
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchingUserData()
     }
     
     private func setupViews() {
@@ -66,6 +75,29 @@ extension UserViewController: LoginButtonDelegate {
             }
         } catch let error {
             print("Failer to sign out with error", error.localizedDescription)
+        }
+    }
+    
+    private func fetchingUserData() {
+        
+        if Auth.auth().currentUser != nil {
+            
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            
+            Database.database().reference()
+            .child("users")
+            .child(uid)
+                .observeSingleEvent(of: .value, andPreviousSiblingKeyWith: { (snapshot, _) in // snapshot - данные полученные с директории users.uid:
+                    // uid : String , id в модели для парса Int, пожтому создаем новую модель для fetch query
+                    guard let userData = snapshot.value as? [String: Any] else { return }
+                    let currentUser = CurrentUser(uid: uid, data: userData)
+                    self.activityIndicator.stopAnimating()
+                    self.userNameLabel.isHidden = false
+                    print(userData)
+                    self.userNameLabel.text = "\(currentUser?.name ?? "Noname") Logged in with Facebook"
+                }) { (error) in
+                    print(error)
+            }
         }
     }
     

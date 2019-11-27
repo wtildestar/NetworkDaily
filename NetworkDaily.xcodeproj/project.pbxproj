@@ -29,6 +29,7 @@
 		D7BDA379238DC8000023C454 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BDA378238DC8000023C454 /* Extensions.swift */; };
 		D7BDA37B238E0B3B0023C454 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BDA37A238E0B3B0023C454 /* GoogleService-Info.plist */; };
 		D7BDA37D238E8B4C0023C454 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BDA37C238E8B4C0023C454 /* UserProfile.swift */; };
+		D7BDA37F238F0BC20023C454 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BDA37E238F0BC20023C454 /* CurrentUser.swift */; };
 		D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C823AA238D715500DC7D84 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		D7BDA378238DC8000023C454 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D7BDA37A238E0B3B0023C454 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7BDA37C238E8B4C0023C454 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		D7BDA37E238F0BC20023C454 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		D7C823AA238D715500DC7D84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 			children = (
 				D74EF9502386FA9F00349A59 /* Course.swift */,
 				D7BDA37C238E8B4C0023C454 /* UserProfile.swift */,
+				D7BDA37E238F0BC20023C454 /* CurrentUser.swift */,
 				D769A72F238950BD0078BC6C /* ImageProperties.swift */,
 				D74EF9522387082300349A59 /* WebsiteDescription.swift */,
 			);
@@ -285,6 +288,7 @@
 				D7595E43238D820800F6CBE0 /* UserViewController.swift in Sources */,
 				D74EF9592388200300349A59 /* ViewController.swift in Sources */,
 				D74EF9532387082300349A59 /* WebsiteDescription.swift in Sources */,
+				D7BDA37F238F0BC20023C454 /* CurrentUser.swift in Sources */,
 				D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */,
 				D74EF95523874FC700349A59 /* TableViewCell.swift in Sources */,
 				D74EF9512386FA9F00349A59 /* Course.swift in Sources */,
