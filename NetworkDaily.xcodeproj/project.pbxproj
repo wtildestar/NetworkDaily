@@ -27,6 +27,7 @@
 		D769A734238972170078BC6C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A733238972170078BC6C /* DataProvider.swift */; };
 		D769A736238AF84C0078BC6C /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */; };
 		D7BDA379238DC8000023C454 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BDA378238DC8000023C454 /* Extensions.swift */; };
+		D7BDA37B238E0B3B0023C454 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BDA37A238E0B3B0023C454 /* GoogleService-Info.plist */; };
 		D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C823AA238D715500DC7D84 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		D76F35CF238D59A5003C4724 /* NetworkDaily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDaily.entitlements; sourceTree = "<group>"; };
 		D7BDA378238DC8000023C454 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D7BDA37A238E0B3B0023C454 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7C823AA238D715500DC7D84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				D74EF94123861DB900349A59 /* Assets.xcassets */,
 				D74EF94323861DB900349A59 /* LaunchScreen.storyboard */,
 				D74EF94623861DB900349A59 /* Info.plist */,
+				D7BDA37A238E0B3B0023C454 /* GoogleService-Info.plist */,
 			);
 			path = NetworkDaily;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74EF94523861DB900349A59 /* LaunchScreen.storyboard in Resources */,
+				D7BDA37B238E0B3B0023C454 /* GoogleService-Info.plist in Resources */,
 				D74EF94223861DB900349A59 /* Assets.xcassets in Resources */,
 				D74EF94023861DB900349A59 /* Main.storyboard in Resources */,
 			);

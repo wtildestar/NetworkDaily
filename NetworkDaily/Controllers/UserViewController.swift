@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import FirebaseAuth
 
 class UserViewController: UIViewController {
     
@@ -51,8 +52,9 @@ extension UserViewController: LoginButtonDelegate {
     }
     
     private func openLoginViewController() {
-        if !(AccessToken.isCurrentAccessTokenActive) {
-            // открываем LoginViewCOntroller в основном потоке если пользователь не авторизован через facebooksdk
+        
+        do {
+            try Auth.auth().signOut()
             DispatchQueue.main.async {
                 // обращаемся к Main storyboard
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -62,7 +64,22 @@ extension UserViewController: LoginButtonDelegate {
                 self.present(loginVC, animated: true)
                 return
             }
+        } catch let error {
+            print("Failer to sign out with error", error.localizedDescription)
         }
+        
+//        if !(AccessToken.isCurrentAccessTokenActive) {
+//            // открываем LoginViewCOntroller в основном потоке если пользователь не авторизован через facebooksdk
+//            DispatchQueue.main.async {
+//                // обращаемся к Main storyboard
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                // Находим LoginViewController по идентификатору
+//                let loginVC = storyBoard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+//                // отображаем созданный loginVC
+//                self.present(loginVC, animated: true)
+//                return
+//            }
+//        }
     }
     
     

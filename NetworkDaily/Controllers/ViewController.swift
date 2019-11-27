@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import FBSDKLoginKit
+import FirebaseAuth
 
 enum Actions: String, CaseIterable {
     case downloadImage = "Download Image"
@@ -205,7 +206,7 @@ extension ViewController {
 extension ViewController {
     private func checkLoggedIn() {
         
-        if !(AccessToken.isCurrentAccessTokenActive) {
+        if Auth.auth().currentUser == nil {
             // открываем LoginViewCOntroller в основном потоке если пользователь не авторизован через facebooksdk
             DispatchQueue.main.async {
                 // обращаемся к Main storyboard
