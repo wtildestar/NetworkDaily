@@ -408,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="-580" y="-580.65967016491754"/>
         </scene>
-        <!--Ign Up-->
+        <!--Sign Up-->
         <scene sceneID="7Gs-l5-ZI1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="jCO-4s-Yxy" customClass="SIgnUp" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jCO-4s-Yxy" customClass="SignUp" customModule="NetworkDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lkZ-fw-AuR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,10 +471,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="qjF-b2-qM5"/>
                     <connections>
-                        <outlet property="confirmPasswordTextField" destination="Dx3-Kc-RYO" id="gdU-SQ-Szw"/>
-                        <outlet property="emailTextField" destination="h4h-jG-hcC" id="uHI-BV-5PF"/>
-                        <outlet property="passwordTextField" destination="myX-Gk-Doz" id="yyI-gS-xOK"/>
-                        <outlet property="userNameTextField" destination="KxP-9g-Wa2" id="OTh-KV-1YE"/>
+                        <outlet property="confirmPasswordTextField" destination="Dx3-Kc-RYO" id="cEY-5N-xUr"/>
+                        <outlet property="emailTextField" destination="h4h-jG-hcC" id="4Rp-RX-j89"/>
+                        <outlet property="passwordTextField" destination="myX-Gk-Doz" id="C1V-l4-MjI"/>
+                        <outlet property="userNameTextField" destination="KxP-9g-Wa2" id="rbi-Tb-jzs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTM-6t-flQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SIgnUp: UIViewController {
+class SignUp: UIViewController {
     
+    var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
     lazy var continueButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
@@ -40,6 +42,13 @@ class SIgnUp: UIViewController {
         emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         confirmPasswordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        
+        activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.color = secondaryColor
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.center = continueButton.center
+        
+        view.addSubview(activityIndicator)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,10 +86,14 @@ class SIgnUp: UIViewController {
         let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         // новые значения расположения кнопки относительно экрана
         continueButton.center = CGPoint(x: view.center.x, y: view.frame.height - keyboardFrame.height - 16.0 - continueButton.frame.height / 2)
+        
+        activityIndicator.center = continueButton.center
     }
     
     @objc private func handleSignUp() {
-        
+        setContinueButton(enabled: false)
+        continueButton.setTitle("", for: .normal)
+        activityIndicator.startAnimating()
     }
     
     

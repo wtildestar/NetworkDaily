@@ -98,6 +98,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D717246E2390604F005B3950 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D74EF95A238823B700349A59 /* CollectionViewCell.swift */,
+				D74EF95423874FC700349A59 /* TableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D74EF92C23861DB800349A59 = {
 			isa = PBXGroup;
 			children = (
@@ -119,16 +128,13 @@
 		D74EF93723861DB900349A59 /* NetworkDaily */ = {
 			isa = PBXGroup;
 			children = (
+				D717246E2390604F005B3950 /* Cell */,
 				D7C823AC238D715900DC7D84 /* Controllers */,
 				D7C823AE238D71CC00DC7D84 /* Models */,
 				D7C823AD238D718400DC7D84 /* Sup */,
 				D76F35CF238D59A5003C4724 /* NetworkDaily.entitlements */,
 				D74EF93823861DB900349A59 /* AppDelegate.swift */,
 				D74EF93A23861DB900349A59 /* SceneDelegate.swift */,
-				D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */,
-				D74EF95A238823B700349A59 /* CollectionViewCell.swift */,
-				D74EF95423874FC700349A59 /* TableViewCell.swift */,
-				D769A733238972170078BC6C /* DataProvider.swift */,
 				D74EF93E23861DB900349A59 /* Main.storyboard */,
 				D74EF94123861DB900349A59 /* Assets.xcassets */,
 				D74EF94323861DB900349A59 /* LaunchScreen.storyboard */,
@@ -158,6 +164,8 @@
 			children = (
 				D74EF95C238919AC00349A59 /* NetworkManager.swift */,
 				D7BDA378238DC8000023C454 /* Extensions.swift */,
+				D769A733238972170078BC6C /* DataProvider.swift */,
+				D769A735238AF84C0078BC6C /* AlamofireNetworkRequest.swift */,
 			);
 			name = Sup;
 			sourceTree = "<group>";
