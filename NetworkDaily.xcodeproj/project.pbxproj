@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		303E405F82279DBB42F12661 /* Pods_NetworkDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A6D428CE3DDFD8EF252BE5 /* Pods_NetworkDaily.framework */; };
+		D717246B23900971005B3950 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717246A23900971005B3950 /* SignIn.swift */; };
+		D717246D23900983005B3950 /* SIgnUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717246C23900983005B3950 /* SIgnUp.swift */; };
 		D74EF93923861DB900349A59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF93823861DB900349A59 /* AppDelegate.swift */; };
 		D74EF93B23861DB900349A59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF93A23861DB900349A59 /* SceneDelegate.swift */; };
 		D74EF93D23861DB900349A59 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF93C23861DB900349A59 /* ImageViewController.swift */; };
@@ -37,6 +39,8 @@
 		5A1C86158C2CDA769B692638 /* Pods-NetworkDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDaily.release.xcconfig"; path = "Target Support Files/Pods-NetworkDaily/Pods-NetworkDaily.release.xcconfig"; sourceTree = "<group>"; };
 		719F3CD6470636E7B6384412 /* Pods-NetworkDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDaily.debug.xcconfig"; path = "Target Support Files/Pods-NetworkDaily/Pods-NetworkDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		B5A6D428CE3DDFD8EF252BE5 /* Pods_NetworkDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D717246A23900971005B3950 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		D717246C23900983005B3950 /* SIgnUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnUp.swift; sourceTree = "<group>"; };
 		D74EF93523861DB900349A59 /* NetworkDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74EF93823861DB900349A59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D74EF93A23861DB900349A59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				D74EF95623876F2B00349A59 /* WebKitViewController.swift */,
 				D7C823AA238D715500DC7D84 /* LoginViewController.swift */,
 				D7595E42238D820800F6CBE0 /* UserViewController.swift */,
+				D717246A23900971005B3950 /* SignIn.swift */,
+				D717246C23900983005B3950 /* SIgnUp.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -305,10 +311,12 @@
 				D74EF95D238919AC00349A59 /* NetworkManager.swift in Sources */,
 				D7595E43238D820800F6CBE0 /* UserViewController.swift in Sources */,
 				D74EF9592388200300349A59 /* ViewController.swift in Sources */,
+				D717246D23900983005B3950 /* SIgnUp.swift in Sources */,
 				D74EF9532387082300349A59 /* WebsiteDescription.swift in Sources */,
 				D7BDA37F238F0BC20023C454 /* CurrentUser.swift in Sources */,
 				D7C823AB238D715500DC7D84 /* LoginViewController.swift in Sources */,
 				D74EF95523874FC700349A59 /* TableViewCell.swift in Sources */,
+				D717246B23900971005B3950 /* SignIn.swift in Sources */,
 				D74EF9512386FA9F00349A59 /* Course.swift in Sources */,
 				D74EF93D23861DB900349A59 /* ImageViewController.swift in Sources */,
 				D7BDA37D238E8B4C0023C454 /* UserProfile.swift in Sources */,

@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     lazy var fbLoginButton: UIButton = {
         let loginButton = FBLoginButton()
-        loginButton.frame = CGRect(x: 32, y: 360, width: view.frame.width - 64, height: 50)
+        loginButton.frame = CGRect(x: 32, y: 250, width: view.frame.width - 64, height: 50)
         loginButton.delegate = self
         return loginButton
     }()
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         loginButton.setTitle("Login with Facebook", for: .normal)
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         loginButton.setTitleColor(.white, for: .normal)
-        loginButton.frame = CGRect(x: 32, y: 360 + 80, width: view.frame.width - 64, height: 50)
+        loginButton.frame = CGRect(x: 32, y: 250 + 80, width: view.frame.width - 64, height: 50)
         loginButton.layer.cornerRadius = 4
         loginButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
         return loginButton
@@ -37,20 +37,29 @@ class LoginViewController: UIViewController {
     
     lazy var googleLoginButton: GIDSignInButton = {
         let loginButton = GIDSignInButton()
-        loginButton.frame = CGRect(x: 32, y: 360 + 80 + 80, width: view.frame.width - 64, height: 50)
+        loginButton.frame = CGRect(x: 32, y: 250 + 80 + 80, width: view.frame.width - 64, height: 50)
         return loginButton
     }()
     
     lazy var customGoogleLoginButton: UIButton = {
         
         let loginButton = UIButton()
-        loginButton.frame = CGRect(x: 32, y: 360 + 80 + 80 + 80, width: view.frame.width - 64, height: 50)
+        loginButton.frame = CGRect(x: 32, y: 250 + 80 + 80 + 80, width: view.frame.width - 64, height: 50)
         loginButton.backgroundColor = .white
         loginButton.setTitle("Login with Google", for: .normal)
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         loginButton.setTitleColor(.gray, for: .normal)
         loginButton.layer.cornerRadius = 4
         loginButton.addTarget(self, action: #selector(handleCustomGoogleLogin), for: .touchUpInside)
+        return loginButton
+    }()
+    
+    lazy var signInWithEmail: UIButton = {
+        let loginButton = UIButton()
+        loginButton.frame = CGRect(x: 32, y: 250 + 80 + 80 + 80 + 80, width: view.frame.width - 64, height: 50)
+        loginButton.setTitle("Sign in with Email", for: .normal)
+        loginButton.setTitleColor(.gray, for: .normal)
+        loginButton.addTarget(self, action: #selector(openSignInVC), for: .touchUpInside)
         return loginButton
     }()
     
@@ -68,6 +77,11 @@ class LoginViewController: UIViewController {
         view.addSubview(customFBLoginButton)
         view.addSubview(googleLoginButton)
         view.addSubview(customGoogleLoginButton)
+        view.addSubview(signInWithEmail)
+    }
+    
+    @objc private func openSignInVC() {
+        performSegue(withIdentifier: "SignIn", sender: self)
     }
     
 }
